@@ -51,6 +51,14 @@ app.get('/', (req, res) => {
         data
     })
 });
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        title: 'Project Page',
+        info: 'Our Mission is To Connect people all over the World and This is Project Page',
+        year: new Date().getFullYear(),
+        data
+    })
+});
 app.get('/about', (req, res) => {
     res.render('about.hbs', { title: 'About Page', year: new Date().getFullYear(), data });
 });
