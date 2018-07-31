@@ -8,7 +8,9 @@ var data = [
     { title: "Najam Shehzad" },
     { title: "Alan Johnson" },
     { title: "Charles Jolley" }
-]
+];
+
+var port = process.env.PORT || 8000;
 
 app.set("view engine", "hbs");
 
@@ -59,4 +61,6 @@ app.get('/bad', (req, res) => {
 });
 
 
-app.listen(8000);
+app.listen(port, () => {
+    console.log(`Runing In Port ${port}`);
+});
